@@ -1,5 +1,5 @@
 # Agora Token Webservice
-![Go](https://github.com/AgoraIO-Community/agora-token-service/workflows/Go/badge.svg?branch=master) ![Docker Image CI](https://github.com/AgoraIO-Community/agora-token-service/workflows/Docker%20Image%20CI/badge.svg?branch=master)  
+![Go](https://github.com/aashish189/agora-token-service/workflows/Go/badge.svg?branch=master) ![Docker Image CI](https://github.com/aashish189/agora-token-service/workflows/Docker%20Image%20CI/badge.svg?branch=master)  
 
 Written in Golang, using [Gin framework](https://github.com/gin-gonic/gin) to create a RESTful webservice for generating user tokens for use with the [Agora.io](https://www.agora.io) platform. 
 
@@ -11,12 +11,12 @@ Agora Advanced Guide: [Token Management](https://docs.agora.io/en/video-calling/
 
 ## Deploy to Render ##
 
-<a href="https://render.com/deploy?repo=https://github.com/AgoraIO-Community/agora-token-service">
+<a href="https://render.com/deploy?repo=https://github.com/aashish189/agora-token-service">
   <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 
 ## Deploy to Heroku ##
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/AgoraIO-Community/agora-token-service)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/aashish189/agora-token-service)
 
 ## How to Run ##
 
@@ -38,7 +38,7 @@ APP_ID=app_id APP_CERTIFICATE=app_cert go run cmd/main.go
 
 ---
 
-The pre-compiled binaries are also available in [releases](https://github.com/AgoraIO-Community/agora-token-service/releases).
+The pre-compiled binaries are also available in [releases](https://github.com/aashish189/agora-token-service/releases).
 
 ## Docker ##
 

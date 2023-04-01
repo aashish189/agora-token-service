@@ -10,8 +10,8 @@ ADD . /go/src/github.com/aashish189/agora-token-service
 
 # # fetch dependencies from github (Gin and Agora Token Service)
 # RUN go install github.com/gin-gonic/gin@latest
-# # RUN go install github.com/AgoraIO-Community/agora-token-service
-# ADD . /go/src/github.com/AgoraIO-Community/agora-token-service
+# # RUN go install github.com/aashish189/agora-token-service
+# ADD . /go/src/github.com/aashish189/agora-token-service
 
 ARG APP_ID
 ARG APP_CERTIFICATE

@@ -3,7 +3,7 @@ package service
 import (
 	"log"
 
-	"github.com/AgoraIO-Community/go-tokenbuilder/rtmtokenbuilder"
+	"github.com/aashish189/go-tokenbuilder/rtmtokenbuilder"
 
 	"github.com/gin-gonic/gin"
 )

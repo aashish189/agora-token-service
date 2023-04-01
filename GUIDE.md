@@ -23,7 +23,7 @@ go mod init agora-token-service
 Lastly, we’ll use `go get` to add our Gin and Agora dependencies.
 ```
 go get github.com/gin-gonic/gin
-go get github.com/AgoraIO-Community/go-tokenbuilder
+go get github.com/aashish189/go-tokenbuilder
 ```
 
 ## Build the Gin web server ##
@@ -125,7 +125,7 @@ api.GET("rte/:channelName/:role/:tokenType/:uid/", getBothTokens)
 
 To minimize the amount of repeated code, the three functions `getRtcToken`, `getRtmToken`, and `getBothTokens` will call separate functions (`parseRtcParams`/`parseRtmParams`) to validate and extract the values passed to each endpoint. Then each function will use the returned values to generate the tokens and return them as JSON in the response `body`.
 
-RTC tokens can be generated using two types of UIDs (`uint`/`string`), so we’ll use a function (`generateRtcToken`) to wrap the [Agora RTC Token Builder](https://github.com/AgoraIO-Community/go-tokenbuilder/blob/master/rtctokenbuilder/RtcTokenBuilder.go) functions `BuildTokenWithUserAccount`/`BuildTokenWithUID`.
+RTC tokens can be generated using two types of UIDs (`uint`/`string`), so we’ll use a function (`generateRtcToken`) to wrap the [Agora RTC Token Builder](https://github.com/aashish189/go-tokenbuilder/blob/master/rtctokenbuilder/RtcTokenBuilder.go) functions `BuildTokenWithUserAccount`/`BuildTokenWithUID`.
 
 Below is the base template for our token server. We’ll walk through each function and fill in the blanks.
 ```go
@@ -135,7 +135,7 @@ import (
   "log"
   "os"
 
-  "github.com/AgoraIO-Community/go-tokenbuilder/rtctokenbuilder"
+  "github.com/aashish189/go-tokenbuilder/rtctokenbuilder"
   "github.com/gin-gonic/gin"
 )
 
@@ -261,7 +261,7 @@ func parseRtcParams(c *gin.Context) (channelName, tokenType, uidStr string, role
 ```
 Lastly, we’ll fill in the `generateRtcToken` function. This function takes the channel name, the UID as a _String_, the type of token (`uid` or `userAccount`), the role, and the expire time.
 
-Using these values, the function calls the appropriate [Agora RTC Token Builder](https://github.com/AgoraIO-Community/go-tokenbuilder/blob/master/rtctokenbuilder/RtcTokenBuilder.go) function (`BuildTokenWithUserAccount`/`BuildTokenWithUID`) to generate a token _String_. Once the token builder function returns we’ll first check for errors and if there aren’t any we’ll return the token _String_ value.
+Using these values, the function calls the appropriate [Agora RTC Token Builder](https://github.com/aashish189/go-tokenbuilder/blob/master/rtctokenbuilder/RtcTokenBuilder.go) function (`BuildTokenWithUserAccount`/`BuildTokenWithUID`) to generate a token _String_. Once the token builder function returns we’ll first check for errors and if there aren’t any we’ll return the token _String_ value.
 ```go
 func generateRtcToken(channelName, uidStr, tokenType string, role rtctokenbuilder.Role, expireTimestamp uint32) (rtcToken string, err error) {
 

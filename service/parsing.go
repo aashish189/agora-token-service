@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/AgoraIO-Community/go-tokenbuilder/rtctokenbuilder"
+	"github.com/aashish189/go-tokenbuilder/rtctokenbuilder"
 	"github.com/gin-gonic/gin"
 )
 

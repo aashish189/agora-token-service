@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/AgoraIO-Community/agora-token-service/service"
+	"github.com/aashish189/agora-token-service/service"
 )
 
 func main() {

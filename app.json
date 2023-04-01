@@ -1,7 +1,7 @@
 {
   "name": "Agora Token Service",
   "description": "an Agora Token Server using Golang & Gin to run as a webservice",
-  "repository": "https://github.com/AgoraIO-Community/agora-token-service",
+  "repository": "https://github.com/aashish189/agora-token-service",
   "logo": "https://www.agora.io/en/wp-content/themes/agora-2020/images/agora-logo.svg",
   "website": "http://www.agora.io",
   "keywords": [ 

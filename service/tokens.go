@@ -5,7 +5,7 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/AgoraIO-Community/go-tokenbuilder/rtctokenbuilder"
+	"github.com/aashish189/go-tokenbuilder/rtctokenbuilder"
 )
 
 func (s *Service) generateRtcToken(channelName, uidStr, tokenType string, role rtctokenbuilder.Role, expireTimestamp uint32) (rtcToken string, err error) {

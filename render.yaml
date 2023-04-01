@@ -2,7 +2,7 @@ services:
   - type: web
     name: Agora Token Server
     env: docker
-    repo: https://github.com/AgoraIO-Community/agora-token-service.git
+    repo: https://github.com/aashish189/agora-token-service.git
     rootDir: .
     envVars:
       - key: APP_ID
