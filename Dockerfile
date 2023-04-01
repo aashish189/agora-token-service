@@ -6,7 +6,7 @@ RUN apk add git ca-certificates --update
 # fetch dependencies github
 # RUN go get -u github.com/gin-gonic/gin
 
-ADD . /go/src/github.com/AgoraIO-Community/agora-token-service
+ADD . /go/src/github.com/aashish189/agora-token-service
 
 # # fetch dependencies from github (Gin and Agora Token Service)
 # RUN go install github.com/gin-gonic/gin@latest
@@ -21,7 +21,7 @@ ENV APP_CERTIFICATE $APP_CERTIFICATE
 ENV SERVER_PORT $SERVER_PORT
 
 # move to the working directory
-WORKDIR $GOPATH/src/github.com/AgoraIO-Community/agora-token-service
+WORKDIR $GOPATH/src/github.com/aashish189/agora-token-service
 # Build the token server command inside the container.
 RUN go build -o agora-token-service -v cmd/main.go
 # RUN go run main.go
